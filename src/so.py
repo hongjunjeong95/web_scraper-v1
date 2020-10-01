@@ -20,8 +20,8 @@ def extract_job(html):
     job_id = html["data-jobid"]
     return {
         "title": title,
-        "company": company,
-        "location": location,
+        "company": company.get_text(strip=True),
+        "location": location.get_text(strip=True),
         "link": f"https://stackoverflow.com/jobs/{job_id}",
     }
 
