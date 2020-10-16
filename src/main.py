@@ -1,8 +1,8 @@
-from flask import Flask, render_template, request, redirect, send_file, url_for
+from flask import Flask, render_template, request, redirect, send_file
 from scrapper import get_jobs
 from exporter import save_to_file
 
-app = Flask("SuperScrapper")
+app = Flask("SuperScrapper", template_folder="./src/templates")
 
 db = {}
 
