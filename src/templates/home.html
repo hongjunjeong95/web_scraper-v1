@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Remote Jobs
+  </title>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet">
+  </link>
+</head>
+
+<body>
+  <header>
+    <h1>Remote Jobs & Reddit</h1>
+  </header>
+  <main>
+    <div class="remoteJobs">
+      <form action="/search">
+        <h4>Search by term:</h4>
+        <input type="text" name="term">
+        <button type="submit">Find my job</button>
+      </form>
+    </div>
+    <div class="redditForm">
+      <form action="/reddit">
+        <h4>Select the subreddits you're interested on:</h4>
+        <ul>
+          {% for subreddit in subreddits %}
+          <li>
+            <input type="checkbox" name="{{subreddit}}" id="{{subreddit}}" />
+            <label for="{{subreddit}}">
+              r/{{subreddit}}
+            </label>
+          </li>
+          {% endfor %}
+        </ul>
+        <button type="submit">Aggregate</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

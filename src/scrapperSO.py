@@ -33,11 +33,10 @@ def extract_jobs(last_page, url):
         for result in results:
             job = extract_job(result)
             jobs.append(job)
-
     return jobs
 
 
-def get_jobs(word):
+def get_SOjobs(word):
     url = f"https://stackoverflow.com/jobs?q={word}"
     last_page = get_last_page(url)
     jobs = extract_jobs(last_page, url)

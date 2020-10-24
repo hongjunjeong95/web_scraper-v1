@@ -10,8 +10,8 @@ autopep8 = "*"
 
 [packages]
 requests = "*"
-beautifulsoup4 = "*"
 flask = "*"
+beautifulsoup4 = "*"
 
 [requires]
 python_version = "3.8"
